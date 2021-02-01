@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+
+    <!---navbar-->
+
+     <!--navbar-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">No Food Waste</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">Ourpurpose</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Ourtarget</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">ViewItems</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="">Add Items</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">BlogOptions</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">ViewItems</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Add Items</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">BlogOptions</a>
+                </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Ourmission</a>
+            </li>
+          </ul>
+         <ul class="navbar-nav ml-auto" >
+             <a class="nav-link" href="login.html">
+              <button type="button" class="btn btn-primary">Sign Up</button>
+
+             </a>
+         </ul>
+        </div>
+      </nav>
+
+
+    <!---signup-->
+    <div class="container">
+        <div class="myCard">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="myLeftCtn"> 
+                        <form class="myForm text-center">
+                            <header>Sign Up</header>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <input class="myInput" type="text" placeholder="Username" id="username" required> 
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-envelope"></i>
+                                <input class="myInput" placeholder="Email" type="text" id="email" required> 
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fas fa-lock"></i>
+                                <input class="myInput" type="password" id="password" placeholder="Password" required> 
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input id="check_1" name="check_1"  type="checkbox" required><small> I read and agree to Terms & Conditions</small></input> 
+                                    <div class="invalid-feedback">You must check the box.</div>
+                                </label>
+                            </div>
+
+                            <input type="submit" class="butt" value="Sign Up"><br><br>
+
+                            <div class="form-group">
+                                <label>
+                                  Already have an account? <a href="login.html">Sign in</a>
+                                    
+                                </label>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div> 
+                <div class="col-md-6">
+                    <div class="myRightCtn">
+                            <div class="box"><header>Welcome to serve needy!</header>
+                            
+                            <p>"Think Before waste your food someone is starving"
+                                To provide unconditional help to the poor and needy
+                                and to provide free food to poor and homeless, needy
+                                will be the best humanity in the world..... 
+                                </p>
+                                <a href="#"><input type="button" class="butt_out" value="Learn More"/></a>
+                            </div>
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+      
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
+

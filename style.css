@@ -1,0 +1,432 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 2s ease;
+}
+
+.slide {
+    width: 33.33%;
+    height: 100%;
+    position: relative;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.slide:nth-child(1) {
+    background-image: url(image/bg-1.jpg);
+}
+
+.slide:nth-child(2) {
+    background-image: url(image/bg-1.jpg);
+}
+
+.slide:nth-child(3) {
+    background-image: url(image/bg-1.jpg);
+}
+
+.slide-data {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0 20%;
+}
+
+.slide-data h1 {
+    font-family: "Anton", serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+.slide-data p {
+    font-family: "Cabin", serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.slide-data button {
+    font-family: "Roboto", serif;
+    background: none;
+    outline: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: bolder;
+    padding: 10px 25px;
+    font-size: 20px;
+    transition: 0.4s linear;
+}
+
+.slide-data button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.slider .arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 60px;
+    color: #fff;
+    transition: 0.4s linear;
+}
+
+.slider .arrows:hover {
+    text-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}
+
+.slider .prev {
+    left: 3%;
+}
+
+.slider .next {
+    right: 3%;
+}
+
+.dots {
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+}
+
+.dots span {
+    width: 23px;
+    height: 23px;
+    border-radius: 100px;
+    margin: 0 6px;
+    background-color: #fff;
+    display: inline-block;
+    transition: 0.4s linear;
+}
+
+.dots span:hover {
+    background-color: #000 !important;
+    border: 2px solid #fff;
+}
+
+.dot-active {
+    background-color: #000 !important;
+    border: 2px solid #fff;
+}
+
+
+
+
+
+
+
+/*login css*/
+
+
+
+*{
+	box-sizing: border-box;
+	margin:0;
+}
+
+.login-popup{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1099;
+	background-color:rgba(0,0,0,0.6);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+}
+.login-popup.show{
+	visibility:visible;
+	opacity: 1;
+}
+.login-popup .box{
+	background-color:#ffffff;
+	width: 750px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 0;
+	margin-left: 50px;
+	transition: all 1s ease;
+
+}
+.login-popup.show .box{
+	opacity: 1;
+	margin-left: 0;
+}
+.login-popup .box .img-area{
+	flex:0 0 50%;
+	max-width: 50%;
+	position: relative;
+	overflow: hidden;
+	padding:30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*.login-popup .box .img-area h1{
+	font-size: 30px;
+}*/
+.login-popup .box .img-area .img{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-image: url('image/loginanimation.png');
+	background-size: cover;
+	background-position: center;
+	animation: zoomInOut 7s linear infinite;
+	z-index: -1;
+
+}
+@keyframes zoomInOut{
+	0%,100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+}
+.login-popup .box .form{
+	flex:0 0 50%;
+	max-width: 50%;
+	padding:40px 30px;
+}
+
+.login-popup .box .form h1{
+	color:#000000;
+	font-size: 30px;
+	margin:0 0 30px;
+}
+.login-popup .box .form .form-control{
+	height: 45px;
+	margin-bottom: 30px;
+	width: 100%;
+	border:none;
+	border-bottom:1px solid #cccccc;
+	font-size: 15px;
+	color:#000000;
+}
+.login-popup .box .form .form-control:focus{
+	outline: none;
+}
+.login-popup .box .form label{
+	font-size: 15px;
+	color:#555555;
+}
+.login-popup .box .form .btn{
+	width: 100%;
+	background-color: #E91E63;
+	margin-top:40px;
+	height: 45px;
+	border:none;
+	border-radius: 25px;
+	font-size: 15px;
+	text-transform: uppercase;
+	color:#ffffff;
+	cursor: pointer;
+}
+.login-popup .box .form .btn:focus{
+	outline: none;
+}
+
+.login-popup .box .form .close{
+	position: absolute;
+	right: 10px;
+	top:0px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+	.login-popup .box{
+		width: calc(100% - 30px);
+	}
+	.login-popup .box .img-area{
+		display: none;
+	}
+	.login-popup .box .form{
+		flex: 0 0 100%;
+        max-width: 100%;
+	}
+}
+
+
+
+
+/*signup css*/
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  body {
+    background: #fbf3ff;
+  } 
+  .container {
+    position: absolute;
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+  .myRightCtn {
+    position: relative;
+    background-image: linear-gradient(45deg, #f046ff, #9b00e8);
+    border-radius: 25px;
+    height: 100%;
+    padding: 25px;
+    color: rgb(192, 192, 192);
+    font-size: 12px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .myLeftCtn {
+    position: relative;
+    background: #fff;
+    border-radius: 25px;
+    height: 100%;
+    padding: 25px;
+    padding-left: 50px;
+  }
+  .myLeftCtn header {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .row{
+  height: 100%;
+  } 
+  .myCard {
+    position: relative;
+    background: #fff;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  } 
+  .myRightCtn header {
+    color: #fff;
+    font-size: 44px;
+  }
+  .box {
+    position: relative;
+    margin: 20px;
+    margin-bottom: 100px;
+  } 
+  .myLeftCtn .myInput {
+    width: 230px;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 50px;
+    border: none;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  }
+  .myLeftCtn .myInput:focus {
+    outline: none;
+  } 
+  .myForm {
+    position: relative;
+    margin-top: 50px;
+  } 
+  .myLeftCtn .butt {
+    background: linear-gradient(45deg, #bb36fd, #9b00e8);
+    color: #fff;
+    width: 230px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  } 
+  .myLeftCtn .butt:hover {
+    background: linear-gradient(45deg, #c85bff, #b726ff);
+  }
+  .myLeftCtn .butt:focus {
+    outline: none;
+  } 
+  .myLeftCtn .fas {
+    position: relative;
+    color: #bb36fd;
+    left: 36px;
+  } 
+  .butt_out {
+    background: transparent;
+    color: #fff;
+    width: 120px;
+    border: 2px solid#fff;
+    border-radius: 25px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  } 
+  .butt_out:hover {
+    border: 2px solid#eecbff;
+  } 
+  .butt_out:focus {
+    outline: none;
+  }
+
+
+
+  /*Contact us css*/
+
+  
